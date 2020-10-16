@@ -15,12 +15,18 @@ For this section of the exercise we will be using the `bigquery-public-data.aust
 
 5. Write a query that tells us how many rows are in the table. 
 	```
-	[YOUR QUERY HERE]
+	SELECT
+      count(*)
+    FROM
+      `bigquery-public-data.austin_311.311_service_requests` 
 	```
 
 7. Write a query that tells us how many _distinct_ values there are in the complaint_description column.
 	``` 
-	[YOUR QUERY HERE]
+	SELECT
+      count(DISTINCT complaint_description)
+    FROM
+      `bigquery-public-data.austin_311.311_service_requests` 
 	```
   
 8. Write a query that counts how many times each owning_department appears in the table and orders them from highest to lowest. 
